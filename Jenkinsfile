@@ -1,6 +1,8 @@
 pipeline {
     agent any
    environment {
+       
+       Credentials_gethub = credentials('github-user')
         // Using returnStdout
         CC = """${sh(
                 returnStdout: true,
